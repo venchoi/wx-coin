@@ -1,0 +1,41 @@
+<view class='container'>
+  <view class='header'>
+    <block wx:if="{{isLoged}}">
+      <view class='login-header'>
+        <view class='portrait'>
+          <image src='{{portraitUrl}}' class='portrait-img'></image>
+        </view>
+        <view class='name'>
+          <view class='nick'>{{nickname}}</view>
+          <view class='uid'>UID: {{uuid}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='logout-header'>
+        <view class='page-title'>欢迎来到爆米</view>
+        <navigator hover-class="none" class='button navi-login' url='/pages/logs/logs' open-type='navigateTo'>马上登录</navigator>
+      </view>
+    </block>
+  </view>
+  <view class='user-container'>
+    <view class='user-item' data-url="/pages/user/user-info/user-info" bindtap='itemNavi'>
+      <view class='left'>
+        <view class='item-icon'></view>
+        <view>个人资料</view>
+      </view>
+      <view class='right'>
+        <view class='iconfont icon-arrow-right'></view>
+      </view>
+    </view>
+    <view class='user-item' data-url="/pages/user/user-collect/user-collect" bindtap='itemNavi'>
+      <view class='left'>
+        <view class='item-icon'></view>
+        <view>我的收藏</view>
+      </view>
+      <view class='right'>
+        <view class='iconfont icon-arrow-right'></view>
+      </view>
+    </view>
+  </view>
+</view>

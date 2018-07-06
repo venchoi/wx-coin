@@ -1,0 +1,11 @@
+<view class="phone">
+  <view class='area-code'>
+    <view class="area-code-value">{{areaCode}}</view>
+    <picker class="area-picker" mode="selector" bindchange='selectAreaCode' value="{{areaCode}}" range="{{areaCodes}}">
+      <view class="symbol">▼</view>
+    </picker>
+  </view>
+  <view class='phone-number'>
+    <input type='number' placeholder='手机号' auto-focus="true" placeholder-style='color: #A8B4BF;' value="{{account}}"></input>
+  </view>
+</view> 

@@ -1,0 +1,12 @@
+
+.container {
+  padding: 0 20px;
+}
+
+.page-title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #394551;
+  line-height: 24px;
+  font-weight: bold;
+}

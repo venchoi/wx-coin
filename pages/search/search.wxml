@@ -1,0 +1,67 @@
+<view class="container">
+  <view class='search-page'>
+    <view class='search-header'>
+      <view class='search'>
+        <input type='text' class='search-input' bindfocus='searchInputFocus' bindinput='submitKeyword' confirm-type='search' bindconfirm="submitSearch" bindblur='searchInputBlur'></input>
+        <view class='search-list' wx:if="{{keywordList.length > 0 && inputFocus}}">
+          <view class='keyword-list'>
+            <block wx:for="{{keywordList}}" wx:for-item="keywordItem">
+              <navigator hover-class="none" open-type='navigateTo' url="/pages/coin/coin?code={{keywordItem[1]}}" data-code="{{keywordItem[1]}}" class="market-realtime coin-tag">
+                <view class='keyword-item'>{{keywordItem[0]}}</view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+        <view class='search-button' bindtap='submitSearch'>
+          <view class='iconfont icon-search'></view>
+        </view>
+      </view>
+      <view class="cancel" bindtap='cancelSearch'>
+        <view class='cancel-text'>取消</view>
+      </view>
+    </view>
+    <view class='search-history' wx:if="{{isInit}}">
+      <view class='history-head'>
+        <view class='history-title'>搜索历史</view>
+        <view class='empty-history' bindtap='emptyHistory'>清空历史</view>
+      </view>
+      <view class='history-container'>
+        <view class='history-list'>
+          <block wx:for="{{searchHistory}}" wx:for-item="historyItem">
+            <view class='history-item'>{{historyItem}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='search-result' wx:if="{{!isInit}}">
+      <view class='search-tabs'>
+        <view class='tabs'>
+          <view class='tab-item {{activeTab === "news" ? "active" : ""}}' data-tab="news" bindtap='tapTab'>快讯</view>
+          <view class='tab-item {{activeTab === "coins" ? "active" : ""}}' data-tab="coins" bindtap='tapTab'>相关币</view>
+        </view>
+      </view>
+      <view class='tabs-content result-press'>
+        <view class='content-item press-container {{activeTab === "news" ? "active" : ""}}'>
+          <fast-news-list fast-news-list="{{fastNewsList}}" class="fast-news-list"></fast-news-list>
+          <view class='no-single-result' wx:if="{{noResult}}">
+            <view class='text'>没有找到关于“{{keyword}}”的相关快讯</view>
+          </view>
+        </view>
+        <view class='content-item coins-container {{activeTab === "coins" ? "active" : ""}}'>
+          <block wx:if="{{!noSingleResult}}" wx:for="{{coinList}}" wx:for-item="coin">
+            <coin-card coin="{{coin}}"></coin-card>
+          </block>
+          <view class='no-single-result' wx:if="{{noSingleResult}}">
+            <view class='text'>没有找到关于“{{keyword}}”的相关币种</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class='no-result' wx:if="{{noResult}}">
+        <view class='search-key'>
+          <view>没有找到关于“{{keyword}}”的相关快讯</view>
+        </view>
+        <view class='tips'>请修改或者尝试其他搜索词</view>
+      </view> -->
+    </view>
+  </view>
+</view>

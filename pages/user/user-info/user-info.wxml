@@ -1,0 +1,28 @@
+<view class="container">
+  <view class='page-title'>个人资料</view>
+  <view class='user-info-container'>
+    <view class='user-info-list'>
+      <view class='info-item'>
+        <view class='item-title'>头像</view>
+        <view class='item-value'>
+          <image src='{{userInfo.head_pic_url}}' class='portrait' mode='widthFix'></image>
+        </view>
+      </view>
+      <view class='info-item'>
+        <view class='item-title'>UID</view>
+        <view class='item-value'>{{userInfo.uuid}}</view>
+      </view>
+      <view class='info-item'>
+        <view class='item-title'>手机号</view>
+        <view class='item-value'>{{userInfo.phone}}</view>
+      </view>
+      <view class='info-item'>
+        <view class='item-title'>昵称</view>
+        <view class='item-value'>{{userInfo.nickname}}</view>
+      </view>
+      <view class='info-item logout' bindtap='logout'>
+        <view class='item-title'>退出登录</view>
+      </view>
+    </view>
+  </view>
+</view>

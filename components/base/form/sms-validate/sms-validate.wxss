@@ -1,0 +1,18 @@
+.verification {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+
+.request-button {
+  height: 52px;
+  line-height: 52px;
+  font-size: 14px;
+  color: #5f99da;
+  text-align: right;
+}
+
+.isWaiting {
+  color: #c7d2dc;
+}

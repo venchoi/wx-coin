@@ -1,0 +1,19 @@
+<view class='press-page'>
+  <view class='page-header'>
+    <view class='page-title'>快讯</view>
+    <view class='search'>
+      <navigator hover-class="none" url='/pages/search/search' open-type='navigateTo'>
+        <view class='iconfont icon-search'></view>
+      </navigator>
+    </view>
+  </view>
+  <view class="lastest-top" bindtap='scrollTop' wx:if="{{lastestNum > 0 && onTop}}">
+    <view class="top-tip">有新消息！点击查看</view>
+  </view>
+  <view class="lastest-susp" bindtap='scrollTop' wx:if="{{lastestNum > 0 && !onTop}}">
+    <view class="susp-tip">{{lastestNum}}条新快讯</view>
+  </view>
+  <view class="container {{(lastestNum > 0 && onTop) ? 'offsetTop' : ''}}">
+    <fast-news-list fast-news-list="{{fastNewsList}}" class="fast-news-list"></fast-news-list>
+  </view>
+</view>

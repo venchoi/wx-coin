@@ -1,0 +1,32 @@
+/* component/list/fast-news-list/fast-news-list.wxss */
+
+.press-container {
+  width: 100%;
+}
+
+.fast-news-list {
+  display: flex;
+}
+
+.panel {
+  width: 100%;
+}
+
+.panel-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 21px;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 16px;
+  color: #0b1013;
+}
+
+.details {
+  font-size: 12px;
+  color: #707d8a;
+}

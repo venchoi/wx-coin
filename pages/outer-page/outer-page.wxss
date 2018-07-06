@@ -1,0 +1,8 @@
+/* pages/outer-page/outer-page.wxss */
+
+.page-section-gap {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 100%;
+  height: 100%;
+}

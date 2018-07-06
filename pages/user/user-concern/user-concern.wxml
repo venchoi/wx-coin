@@ -1,0 +1,17 @@
+<view class="container">
+  <block wx:if="{{noneConcern}}">
+    <view class='concern-none'>
+      <image src="/dist/images/none-concern.png" class='none-img' mode='widthFix'></image>
+      <view class='tip'>没有关注、如何抢占先机呢</view>
+      <navigator hover-class="none" class='add' url='/pages/search/search' open-type='navigateTo'>
+        <image src='/dist/images/add.png' class='add-img' mode='widthFix'></image>
+        <view class='add-text'>添加</view>
+      </navigator>
+    </view>
+  </block>
+  <block wx:else>
+    <block wx:for="{{coinList}}" wx:for-item="coin">
+      <coin-card coin="{{coin}}"></coin-card>
+    </block>
+  </block>
+</view>

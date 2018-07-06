@@ -1,0 +1,25 @@
+<view class="container">
+  <view class='page-title'>欢迎回来, {{nick}}</view>
+  <view class="page-tip">{{areaCode}} {{account}}</view>
+  <view class="form">
+    <!-- set-password  -->
+    <view class="form-item password">
+      <input class="password-input" type='password' placeholder='密码（6-16位，包含数字和字母)' placeholder-style='color: #A8B4BF;' bindinput="bindPswInput" bindblur="bindPswBlur"></input>
+      <view class='symbol'>
+        <text wx:if="{{isViewable}}" class="viewable iconfont icon-viewable"></text>
+        <text wx:else class='unviewable iconfont icon-unviewable'></text>
+      </view>
+    </view>
+    <!-- end set-password  -->
+    <view class='form-item other-ways'>
+      <view class="sms-login">
+        <navigator hover-class="none" open-type='navigateTo' url="/pages/logs/login-sms/login-sms?account={{account}}&areaCode={{areaCode}}&nick={{nick}}">手机验证码登录</navigator>
+      </view>
+      <view class='find-psw'>
+        <navigator hover-class="none" open-type='navigateTo' url="/pages/logs/login-find-psw/login-find-psw?account={{account}}&areaCode={{areaCode}}&nick={{nick}}">找回密码</navigator>
+      </view>
+    </view>
+    <view wx:if="{{formError}}" class='form-tip'>{{errorTip}}</view>
+    <button class='next' bindtap='login'>登录</button>
+  </view>
+</view>

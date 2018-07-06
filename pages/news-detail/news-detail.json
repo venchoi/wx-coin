@@ -1,0 +1,5 @@
+{
+  "usingComponent": {
+    "coin-tags": "/components/card/coin-tags/coin-tags"
+  }
+}

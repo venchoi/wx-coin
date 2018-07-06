@@ -1,0 +1,17 @@
+.check-code {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+.check-value {
+  flex-grow: 1;
+}
+.img-container {
+  width: 90px;
+}
+
+.check-img {
+  width: 90px;
+  height: 100%;
+}

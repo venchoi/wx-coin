@@ -1,0 +1,10 @@
+<view class="coin-tags">
+  <block wx:for="{{renderCoins}}" wx:for-item="coin">
+    <navigator hover-class="none" open-type='navigateTo' url="/pages/coin/coin?code={{coin.lowerCode}}" data-code="{{coin.lowerCode}}">
+      <view class='market-realtime coin-tag'>
+        <view class="coin-code" data-code="{{code}}">{{coin.code}}</view>
+        <view class="ratio {{coin.class}}">{{coin.ratio}}</view>
+      </view>
+    </navigator>
+  </block>
+</view>

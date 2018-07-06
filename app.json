@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user-concern/user-concern",
+    "pages/coin/coin",
+    "pages/user/user",
+    "pages/news-detail/news-detail",
+    "pages/coin-quotations/coin-quotations",
+    "pages/page-not-found/page-not-found",
+    "pages/search/search",
+    "pages/logs/logs",
+    "pages/logs/login/login",
+    "pages/logs/register/register",
+    "pages/logs/register-psw/register-psw",
+    "pages/logs/login-find-psw/login-find-psw",
+    "pages/logs/login-sms/login-sms",
+    "pages/logs/reset-password/reset-password",
+    "pages/outer-page/outer-page",
+    "pages/user/user-collect/user-collect",
+    "pages/user/user-info/user-info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "PopCoin",
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "#fff",
+    "backgroundColorBottom": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#A8B4BF",
+    "selectedColor": "#5F99DA",
+    "backgroundColor": "#FFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "快讯",
+        "iconPath": "dist/images/news.png",
+        "selectedIconPath": "dist/images/news-selected.png"
+      },
+      {
+        "pagePath": "pages/user/user-concern/user-concern",
+        "text": "关注",
+        "iconPath": "dist/images/concern.png",
+        "selectedIconPath": "dist/images/concern-selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "dist/images/market.png",
+        "selectedIconPath": "dist/images/market-selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 50000,
+    "connectSocket": 50000,
+    "uploadFile": 50000,
+    "downloadFile": 50000
+  },
+  "debug": true
+}

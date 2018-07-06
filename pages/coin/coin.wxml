@@ -1,0 +1,83 @@
+<view class="container">
+  <view class='coin-detail-page'>
+    <view class='column info'>
+      <view class='main-info'>
+        <view class='left'>
+          <view class="logo">
+            <block wx:if="{{coin.small_logo_url.length > 0}}">
+              <image class="logo-image" src='{{coin.small_logo_url}}' mode='widthFix'></image>
+            </block>
+            <block wx:elif="{{coin.big_logo_url.length  > 0}}">
+              <image class="logo-image" src='{{coin.big_logo_url}}' mode='widthFix'></image>
+            </block>
+            <block wx:else>
+              <image class="logo-image" src='/dist/images/concern.png' mode='widthFix'></image>
+            </block>
+          </view>
+          <view class='detail'>
+            <view class='name'>{{coin.ch_name}}{{coin.en_short_name}}</view>
+            <view class='market market-realtime'>
+              <view class='price'>{{coin.price}}</view>
+              <view class='ratio {{coin.class}}'>{{coin.ratio}}</view>
+            </view>
+            <view class='source'>数据来源：{{coin.source_name}}</view>
+          </view>
+        </view>
+        <view class='right'>
+          <view class='link'>
+            <navigator hover-class="none" url='/pages/outer-page/outer-page?url={{coin.official_website_address[0]}}' data-url="{{coin.official_website_address[0]}}">
+              <image class='link-image' src='/dist/images/link.png' mode='widthFix'></image>
+            </navigator>
+          </view>
+        </view>
+      </view>
+      <view class='action'>
+        <view class='short-name'>{{coin.en_name}}</view>
+        <block wx:if="{{coin.is_collect == 1}}">
+          <view class="button follow active" catchtap='operateCoin'>已关注</view>
+        </block>
+        <block wx:else>
+          <view class="button follow" catchtap='operateCoin'>关注</view>
+        </block>
+      </view>
+    </view>
+    <view class='column content'>
+      <view class='tabs'>
+        <view class='tab-item {{activeTab === "news" ? "active" : ""}}' data-tab="news" bindtap='tapTab'>快讯</view>
+        <view class='tab-item {{activeTab === "produce" ? "active" : ""}}' data-tab="produce" bindtap='tapTab'>介绍</view>
+      </view>
+      <view class='tabs-contents'>
+        <block wx:if="{{activeTab === 'news'}}">
+          <fast-news-list fast-news-list="{{fastNewsList}}" class="fast-news-list"></fast-news-list>
+        </block>
+        <block wx:else>
+          <view class='content-item produce'>
+            <block wx:if="{{coin.white_book.length > 0 }}">
+              <view class='desc'>
+                <navigator hover-class="none" class='outer white-paper' url='{{coin.white_book}}'>
+                  <view class='book'>
+                    <image class='book-image' src='/dist/images/book.png' mode='widthFix'></image>
+                  </view>
+                  <view class='book-text'>项目白皮书</view>
+                  <view class='arrow'>
+                    <view class='iconfont icon-arrow-right'></view>
+                  </view>
+                </navigator>
+              </view>
+            </block>
+            <view class='intro'>
+              <view class='project'>
+                <block wx:if="{{coin.content.length > 0}}">
+                  <rich-text class="text" nodes="{{coin.content}}"></rich-text>
+                </block>
+                <block wx:elif="{{coin.description.length > 0}}">
+                  <rich-text class="text" nodes="{{coin.description}}"></rich-text>
+                </block>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

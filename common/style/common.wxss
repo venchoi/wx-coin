@@ -1,0 +1,10 @@
+@import "./font.wxss";
+@import "./button.wxss";
+
+.bad {
+  color: #ff6262;
+}
+
+.good {
+  color: #55dbb3;
+}

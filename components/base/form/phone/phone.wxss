@@ -1,0 +1,32 @@
+/* component/base/form/phone/phone.wxss */
+.phone {
+  display: flex;
+  height: 52px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+.area-code {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55px;
+}
+.area-code-value {
+  font-weight: bold;
+  font-size: 14px;
+  color: #394551;
+}
+.symbol{
+  font-size: 12px;
+  color: #707D8A;
+}
+.phone-number {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+input {
+  height: 100%;
+  font-size: 14px;
+}

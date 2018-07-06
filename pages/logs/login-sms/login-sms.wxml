@@ -1,0 +1,22 @@
+<view class="container">
+  <view class='page-title'>手机验证码登录</view>
+  <view class="account">{{areaCode}} {{account}}</view>
+  <view class="form">
+    <!-- img-validate  -->
+    <view class='form-item check-code'>
+      <input class="check-value" type='text' placeholder='输入右侧编码' placeholder-style='color: #A8B4BF;' bindinput="bindImgInput" bindblur="bindImgBlur"></input>
+      <view class='img-container' bindtap='requestVerifyId'>
+        <image class='check-img' src="http://api.popcoin.live/tool/verify/wapi/api.html?id={{verifyId}}"></image>
+      </view>
+    </view>
+    <!-- end img-validate  -->
+    <!-- sms-validate  -->
+    <view class="form-item verification">
+      <input type="number" class="verification-code" placeholder='短信验证码' placeholder-style='color: #A8B4BF;' bindinput="bindSmsInput" bindblur="bindSmsBlur"></input>
+      <view class="request-button {{isSmsActive ? 'is-active' : ''}}" bindtap='requestSmsCode'>{{smsRequestTip}}</view>
+    </view>
+    <!-- end sms-validate  -->
+    <view wx:if="{{formError}}" class='form-tip'>{{errorTip}}</view>
+    <button class='next' bindtap='login'>登录</button>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+/* pages/logs/register-psw/register-psw.wxss */
+
+.container {
+  padding: 16px 20px;
+}
+
+.page-title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #394551;
+  line-height: 36px;
+}
+
+.form {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.form-tip {
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #ff6262;
+  font-weight: bold;
+}
+
+.form-item {
+  margin-bottom: 17px;
+}
+
+.page-tip {
+  margin-top: 2px;
+  font-size: 14px;
+  color: #a8b4bf;
+  line-height: 22px;
+}
+
+button {
+  margin-top: 32px;
+}
+
+input {
+  height: 100%;
+  font-size: 14px;
+}
+
+/* set-passwrod  */
+
+.password {
+  height: 52px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+
+.password-input {
+  padding-right: 24px;
+}
+
+/* end set-pasword  */

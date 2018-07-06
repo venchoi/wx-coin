@@ -1,0 +1,30 @@
+<view class="news-detail-page" data-news-id="{{newsId}}">
+  <view class="news-component">
+    <!-- <view class="head-title">区块链新闻每日早读</view> -->
+    <block wx:if="{{newsData.coin.length}}">
+      <coin-tags coins="{{newsData.coin}}"></coin-tags>
+    </block>
+    <view class="author">
+      <view class="icon">
+        <image class="author-image" src="{{newsData.channel_icon}}" mode="aspectFit"></image>
+      </view>
+      <view class="name">{{newsData.source_name}} ·
+        <text class='time'>{{newsData.update_time}}</text>
+      </view>
+    </view>
+    <view class="article-container">
+      <rich-text class="article-content" nodes="{{stringContent}}"></rich-text>
+    </view>
+  </view>
+</view>
+<view class="actions-footer">
+  <view class="button-container">
+    <view class="button thumbs-up" data-type="1">
+      <view class="iconfont icon-thumbs-up"></view>
+      <text>0</text>
+    </view>
+    <view class="button collect" data-type="1">
+      <view class="iconfont icon-star"></view>
+    </view>
+  </view>
+</view>

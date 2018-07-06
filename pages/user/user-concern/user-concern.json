@@ -1,0 +1,6 @@
+{
+  "backgroundColor": "#EEF2F6",
+    "usingComponents": {
+      "coin-card": "/components/card/coin-card/coin-card"
+    }
+}

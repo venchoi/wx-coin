@@ -1,0 +1,82 @@
+@import "/common/style/common.wxss";
+
+.news-detail-page {
+  margin-top: 16px;
+}
+
+.news-component {
+  padding: 0 20px 48px 20px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  color: #8590a6;
+  font-size: 14px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.author-image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.article-container {
+  margin-top: 24px;
+}
+
+.article-content {
+  text-align: left;
+  line-height: 28px;
+  font-size: 16px;
+  color: #0b1013;
+}
+
+.actions-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 12px 0;
+  display: flex;
+  justify-content: flex-start;
+  border-top: rgba(32, 42, 51, 0.08) solid 1px;
+  height: 32px;
+  width: 100%;
+  box-shadow: 0 6px 18px 0 rgba(11, 16, 19, 0.16);
+  background-color: #fff;
+  z-index: 999;
+}
+
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  height: 100%;
+}
+
+.button {
+  border: none;
+  height: 100%;
+  width: auto;
+  padding: 0 16px;
+}
+
+.collect {
+  border-left: 1px solid rgba(32, 42, 51, 0.08);
+}
+
+.thumbs-up text {
+  padding-left: 8px;
+  font-size: 12px;
+}
+
+.button.active iconfont {
+  color: #8590a6;
+  background-color: #8590a6;
+}

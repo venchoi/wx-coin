@@ -1,0 +1,25 @@
+input:-moz-placeholder, input:-ms-input-placeholder,
+input::-webkit-input-placeholder {
+  color: #394551;
+}
+
+.phone {
+  display: flex;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+  width: 100%;
+  height: 52px;
+}
+
+input {
+  height: 100%;
+  font-size: 14px;
+}
+
+.area-code {
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.phone-number {
+  flex-grow: 1;
+}

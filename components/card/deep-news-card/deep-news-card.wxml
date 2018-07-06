@@ -1,0 +1,51 @@
+<view class="deep-card {{renderNews.recommend_level == 10 ? 'picked' : ''}}" data-id="{{renderNews.news_id}}">
+  <view class="card-time">
+    <block wx:if="{{timeDate == 'timeDate'}}">
+      <block wx:if="{{timeData === thisYear}}">
+        <text>{{renderNews.time}}</text>
+        <text>{{renderNews.date}}</text>
+      </block>
+      <block wx:else>
+        <text>{{renderNews.time}}</text>
+        <text>{{renderNews.date}}</text>
+        <text>{{renderNews.year}}</text>
+      </block>
+    </block>
+    <block wx:else>
+      <text>{{renderNews.time}}</text>
+    </block>
+  </view>
+  <view class='article-container'>
+    <navigator hover-class="none" open-type='navigateTo' url="/pages/news-detail/news-detail?id={{renderNews.news_id}}&uuid={{renderNews.news_uuid}}" class='news-link' data-news-id="{{renderNews.news_id}}">
+      <view class='main-content'>
+        <text class='h2'>{{renderNews.title}}</text>
+      </view>
+      <block wx:if="{{renderNews.thumb_url.length}}">
+        <image src="{{renderNews.thumb_url}}" mode="aspectFill"></image>
+      </block>
+    </navigator>
+    <block wx:if="{{renderNews.coins.length}}">
+      <coin-tags coins="{{renderNews.coins}}"></coin-tags>
+    </block>
+    <view class="button-container">
+      <view class="left-buttons">
+        <view class="button button-up {{renderNews.user_attitude === 'up' ? 'active' : ''}}" bindtap="operateNews" data-attitude="up" data-source_type="attitude_up">
+          <text class='iconfont icon-up'></text>
+          <text>{{renderNews.attitude_up}}</text>
+        </view>
+        <view class="button button-down {{renderNews.user_attitude === 'down' ? 'active' : ''}}" bindtap="operateNews" data-attitude="down" data-source_type="attitude_down">
+          <text class='iconfont icon-down'></text>
+          <text>{{renderNews.attitude_down}}</text>
+        </view>
+      </view>
+      <view class="right-buttons">
+        <view class="button button-collect {{renderNews.is_collect === 1 ? 'active' : ''}}" bindtap="operateNews" data-attitude="is_collect" data-source_type="is_collect">
+          <text class='iconfont icon-star'></text>
+        </view>
+        <!-- <view class="button" class="share">
+          <text class='iconfont icon-share'></text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>

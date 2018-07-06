@@ -1,0 +1,35 @@
+<view class="coin-card market-realtime">
+  <navigator hover-class="none" url='/pages/coin/coin?code={{code}}'>
+    <view class="column">
+      <view class="logo">
+        <block wx:if="{{renderCoin.small_logo_url.length > 0}}">
+          <image src='{{renderCoin.small_logo_url}}' mode='widthFix'></image>
+        </block>
+        <block wx:elif="{{renderCoin.big_logo_url.length  > 0}}">
+          <image src='{{renderCoin.big_logo_url}}' mode='widthFix'></image>
+        </block>
+        <block wx:else>
+          <image src='/dist/images/concern.png' mode='widthFix'></image>
+        </block>
+      </view>
+      <view class="data">
+        <view class="head">
+          <view class="name">{{renderCoin.en_short_name}} {{renderCoin.ch_name}}</view>
+        </view>
+        <view class="market">
+          <view class="price">{{renderCoin.price}}</view>
+          <view class="ratio {{renderCoin.class}}">{{renderCoin.ratio}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="action">
+      <block wx:if="{{renderCoin.is_collect == 1}}">
+        <view class="button follow active" data-type="0" catchtap='operateCoin'>已关注</view>
+      </block>
+      <block wx:else>
+        <view class="button follow" data-type="1" catchtap='operateCoin'>关注</view>
+      </block>
+      <view class="data-source">数据来源于{{renderCoin.source_name}}</view>
+    </view>
+  </navigator>
+</view>

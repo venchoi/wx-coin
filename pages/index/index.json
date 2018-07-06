@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTitleText": "快讯",
+  "backgroundColor": "#fff",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "fast-news-list": "/components/list/fast-news-list/fast-news-list"
+  }
+}

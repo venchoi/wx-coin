@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#394551",
+  "backgroundColor": "#394551",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fast-news-list": "/components/list/fast-news-list/fast-news-list"
+  }
+}

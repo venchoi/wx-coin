@@ -1,0 +1,32 @@
+<view class="press-container">
+  <block wx:if="{{noDate}}">
+    <view class="panel">
+      <block wx:for="{{fastNewsList}}" wx:for-item="news">
+        <block wx:if="{{news.catalog_id == '200'}}">
+          <deep-news-card news="{{news}}" timeDate="{{timeDate}}"></deep-news-card>
+        </block>
+        <block wx:else>
+          <fast-news-card news="{{news}}" timeDate="{{timeDate}}"></fast-news-card>
+        </block>
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <block wx:for="{{fastNewsList}}" wx:for-item="dateNews">
+      <view class="panel" data-date="{{dateNews.date}}">
+        <view class="panel-time">
+          <view class="date">{{dateNews.lang_date}}</view>
+          <view class="details">{{dateNews.date_week}}</view>
+        </view>
+        <block wx:for="{{dateNews.news_list}}" wx:for-item="news">
+          <block wx:if="{{news.catalog_id == '200'}}">
+            <deep-news-card news="{{news}}" timeDate="{{timeDate}}"></deep-news-card>
+          </block>
+          <block wx:else>
+            <fast-news-card news="{{news}}" timeDate="{{timeDate}}"></fast-news-card>
+          </block>
+        </block>
+      </view>
+    </block>
+  </block>
+</view>

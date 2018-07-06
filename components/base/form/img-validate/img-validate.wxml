@@ -1,0 +1,6 @@
+<view class='check-code'>
+  <input class="check-value" type='text' placeholder='输入右侧编码' placeholder-style='color: #A8B4BF;'></input>
+  <view class='img-container'>
+    <image class='check-img' src="/tool/verify/wapi/api.html"></image>
+  </view>
+</view>

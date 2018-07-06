@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "/common/style/common.wxss";
+
+view, text, navigator {
+  font-family: "din";
+}

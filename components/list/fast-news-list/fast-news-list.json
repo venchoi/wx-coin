@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fast-news-card": "/components/card/fast-news-card/fast-news-card",
+    "deep-news-card": "/components/card/deep-news-card/deep-news-card"
+  }
+}

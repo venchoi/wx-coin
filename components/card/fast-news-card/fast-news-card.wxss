@@ -1,0 +1,122 @@
+@import "/common/style/common.wxss";
+
+.fast-card {
+  display: flex;
+  text-align: left;
+  margin-top: 20rpx;
+  flex-shrink: 1;
+}
+
+.picked .main-content .h2 {
+  color: #ff6262;
+}
+
+.picked .article-content {
+  color: #ff6262;
+}
+
+.card-time {
+  display: flex;
+  flex-flow: column;
+  flex-shrink: 0;
+  width: 50px;
+  font-size: 14px;
+  color: #a8b4bf;
+  text-align: left;
+}
+
+.card-time>text {
+  font-size: 14px;
+  color: #a8b4bf;
+  text-align: left;
+  line-height: 22px;
+}
+
+.article-container {
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: inline;
+  font-size: 13px;
+  color: #394551;
+  word-break: break-all;
+  line-height: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+
+.main-content {
+  text-align: justify;
+}
+
+.h2 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.article-content {
+  display: inline;
+  font-size: 13px;
+  color: #394551;
+  word-break: break-all;
+}
+
+image {
+  width: 90rrpx;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12rpx;
+  height: 24px;
+}
+
+.left-buttons {
+  display: flex;
+  height: 22px;
+}
+
+.left-buttons .button .iconfont {
+  margin-right: 6px;
+}
+
+.button-up.active {
+  color: #55dbb3;
+  border: 1px solid #55dbb3;
+}
+
+.button-down.active {
+  color: #ff6262;
+  border: 1px solid #ff6262;
+}
+
+.button-collect {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button-collect.active {
+  color: #ffcb62;
+}
+
+.right-buttons {
+  display: flex;
+}
+
+/* .collect {
+  margin-right: 10px;
+} */
+
+.right-buttons .iconfont {
+  font-size: 24px;
+}
+
+image {
+  width: 90px;
+}
+
+image {
+  border-radius: 6px;
+}

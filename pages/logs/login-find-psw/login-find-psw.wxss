@@ -1,0 +1,100 @@
+/* pages/logs/login-find-psw/login-find-psw.wxss */
+.container {
+  padding: 16px 20px;
+}
+
+.page-title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #394551;
+  line-height: 36px;
+}
+
+.form {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.form-tip {
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #ff6262;
+  font-weight: bold;
+}
+
+.form-item {
+  margin-bottom: 17px;
+}
+
+.phone {
+  margin-bottom: 17px;
+}
+
+button {
+  margin-top: 32px;
+}
+
+.account {
+  margin-top: 2px;
+  font-size: 14px;
+  color: #a8b4bf;
+  line-height: 22px;
+}
+
+input {
+  height: 100%;
+  font-size: 14px;
+}
+
+/* img-validate  */
+
+.check-code {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+
+.check-value {
+  flex-grow: 1;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 100%;
+}
+
+.check-img {
+  width: 90px;
+  height: 100%;
+  height: 32px;
+}
+
+/* end img-validate  */
+
+/* sms-validate  */
+
+.verification {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+}
+
+.request-button {
+  height: 52px;
+  line-height: 52px;
+  font-size: 14px;
+  color: #c7d2dc;
+  text-align: right;
+}
+
+.is-active {
+  color: #5f99da;
+}
+
+/* end sms-validate  */

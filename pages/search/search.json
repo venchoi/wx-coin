@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "fast-news-list": "/components/list/fast-news-list/fast-news-list",
+    "coin-card": "/components/card/coin-card/coin-card"
+  }
+}

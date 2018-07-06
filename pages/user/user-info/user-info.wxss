@@ -1,0 +1,46 @@
+.container {
+  padding: 0 20px;
+}
+
+.page-title {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #394551;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.user-info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid rgba(32, 42, 51, 0.08);
+  color: #394551;
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.item-value {
+  font-size: 14px;
+  color: #707d8a;
+  text-align: right;
+}
+
+.portrait {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.logout {
+  color: #707d8a;
+  border-bottom: 0;
+}

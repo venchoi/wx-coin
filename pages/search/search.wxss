@@ -1,0 +1,188 @@
+/* pages/search/search.wxss */
+@import '../../common/style/tabs.wxss';
+
+.container {
+}
+
+.search-page {
+}
+
+.search-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 375px;
+  height: 44px;
+  padding: 6px 0;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  width: 301px;
+  margin-left: 15px;
+  background: rgba(238, 242, 246, 0.6);
+}
+
+.cancel {
+  width: 28px;
+  font-size: 14px;
+  color: #5f99da;
+  margin-left: 16px;
+}
+
+/* todo :focus  */
+
+.search-input {
+  padding-left: 38px;
+  border-radius: 3px;
+  height: 32px;
+  line-height: 32px;
+  color: #0b1013;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.search-list {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+}
+
+.keyword-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  padding: 8px 0;
+  box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.08);
+}
+
+.keyword-item {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 12px;
+  background: #fff;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  color: #0b1013;
+}
+
+.keyword-item.active {
+  background-color: rgba(238, 242, 246, 0.25);
+  color: #0b1013;
+}
+
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  height: 100%;
+  line-height: 100%;
+  width: 36px;
+  color: #a8b4bf;
+}
+
+.icon-search {
+  height: 100%;
+  line-height: 100%;
+  font-size: 24px;
+}
+
+.search-history {
+  padding: 0 15px;
+}
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+}
+
+.history-title {
+  font-weight: blod;
+  font-size: 16px;
+  color: #394551;
+}
+
+.empty-history {
+  font-size: 12px;
+  color: #707d8a;
+}
+
+.history-container {
+}
+
+.history-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.history-item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  height: 16px;
+  line-height: 16px;
+  background: rgba(238, 242, 246, 0.6);
+  font-size: 12px;
+  color: #707d8a;
+}
+
+.tabs {
+  height: 54px;
+  line-height: 54px;
+}
+
+.search-result {
+}
+
+.search-tabs {
+}
+
+.tabs {
+}
+
+.tab-item {
+}
+
+.tabs-content {
+  padding: 0 15px;
+}
+
+.em {
+  color: #ffa162;
+}
+
+.content-item {
+}
+
+.no-single-result {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #707d8a;
+}
+
+.no-single-result>.text {
+}
+
+.noresult {
+}
+
+.search-key {
+}
+
+.tips {
+}

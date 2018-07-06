@@ -1,0 +1,25 @@
+<view class="container">
+  <view class='page-title'>设置密码</view>
+  <!-- todo 用户协议  -->
+  <view class="page-tip">注册即代表已阅读并同意《用户协议》</view>
+  <view class="form">
+    <!-- set-password  -->
+    <view class="form-item password">
+      <input class="password-input" type='password' placeholder='设置密码（6-16位，包含数字和字母)' placeholder-style='color: #A8B4BF;' bindinput="bindPswInput" bindblur="bindPswBlur"></input>
+      <view class='symbol'>
+        <text wx:if="{{isViewable}}" class="viewable iconfont icon-viewable"></text>
+        <text wx:else class='unviewable iconfont icon-unviewable'></text>
+      </view>
+    </view>
+    <!-- end set-password  -->
+    <view class="form-item password">
+      <input class="password-input" type='password' placeholder='邀请码（非必填）' placeholder-style='color: #A8B4BF;' bindinput="bindInviteInput"></input>
+      <view class='symbol'>
+        <text wx:if="{{isViewable}}" class="viewable iconfont icon-viewable"></text>
+        <text wx:else class='unviewable iconfont icon-unviewable'></text>
+      </view>
+    </view>
+    <view wx:if="{{formError}}" class='form-tip'>{{errorTip}}</view>
+    <button class='next' bindtap='register'>注册</button>
+  </view>
+</view>
